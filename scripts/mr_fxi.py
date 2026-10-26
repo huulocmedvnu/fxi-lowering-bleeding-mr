@@ -1,8 +1,8 @@
 """Drug-target MR: plasma FXI (cis pQTL, UKB Olink) -> FinnGen R12 outcomes. Generalised IVW with LD, Egger, WM, Wald; coloc ABF.
 Run from repo root. Inputs: data/pqtl/F11.cis.tsv (+header), data/finngen/<ep>.cis.tsv, 1000G EUR plink (hg19, rsid)."""
-import subprocess, numpy as np, pandas as pd, sys
+import os, subprocess, numpy as np, pandas as pd, sys
 from scipy import stats
-PL = "/mnt/hdd2/loc-tran/miniconda3/envs/ldsc3/bin/plink"; BF = "/mnt/hdd2/loc-tran/birth_canal_gen/ref/EUR"
+PL = os.environ.get("PLINK", "plink"); BF = os.environ.get("REF_EUR", "ref/EUR")  # PLINK 1.9, 1000G EUR bfile prefix
 R2 = float(sys.argv[1]) if len(sys.argv) > 1 else 0.1
 hdr = open("data/pqtl/header.txt").read().strip().split("\t")
 pq = pd.read_csv("data/pqtl/F11.cis.tsv", sep="\t", header=None, names=hdr, comment="#")

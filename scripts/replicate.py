@@ -1,8 +1,8 @@
 """Outcome replication (amendment 2026-10-26a): UKB (Pan-UKBB EUR) and MVP VTE; FinnGen + UKB fixed-effect meta.
 OR per SD lower FXI, generalised IVW with LD (r2<0.1 instruments), multiplicative random effects."""
-import subprocess, numpy as np, pandas as pd
+import os, subprocess, numpy as np, pandas as pd
 from scipy import stats
-PL = "/mnt/hdd2/loc-tran/miniconda3/envs/ldsc3/bin/plink"; BF = "/mnt/hdd2/loc-tran/birth_canal_gen/ref/EUR"
+PL = os.environ.get("PLINK", "plink"); BF = os.environ.get("REF_EUR", "ref/EUR")  # PLINK 1.9, 1000G EUR bfile prefix
 hdr = open("data/pqtl/header.txt").read().strip().split("\t")
 fx = pd.read_csv("data/pqtl/F11.cis.tsv", sep="\t", header=None, names=hdr).rename(columns={"base_pair_location": "pos", "effect_allele": "ea", "other_allele": "oa", "beta": "b", "standard_error": "s"})
 iv = pd.read_csv("outputs/clump_r0.1.clumped", sep=r"\s+").SNP

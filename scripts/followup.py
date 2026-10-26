@@ -1,8 +1,8 @@
 """Follow-up: coloc ABF, KLKB1 (adjacent gene) checks, replication exposure, weighted median / Egger.
 OR per SD lower FXI throughout. Run from repo root after mr_fxi.py."""
-import subprocess, numpy as np, pandas as pd
+import os, subprocess, numpy as np, pandas as pd
 from scipy import stats
-PL = "/mnt/hdd2/loc-tran/miniconda3/envs/ldsc3/bin/plink"; BF = "/mnt/hdd2/loc-tran/birth_canal_gen/ref/EUR"
+PL = os.environ.get("PLINK", "plink"); BF = os.environ.get("REF_EUR", "ref/EUR")  # PLINK 1.9, 1000G EUR bfile prefix
 def pqtl(name):
     h = open(f"data/pqtl/{'header.txt' if name=='F11' else name+'.header.txt'}").read().strip().split("\t")
     d = pd.read_csv(f"data/pqtl/{name}.cis.tsv", sep="\t", header=None, names=h)

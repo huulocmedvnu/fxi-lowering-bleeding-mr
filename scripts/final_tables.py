@@ -1,8 +1,8 @@
 """Single source of all reported estimates (OR per SD lower plasma FXI). Writes outputs/results_all.tsv.
 Instruments: cis F11 pQTL P<5e-8 clumped r2<0.1 (primary) or r2<0.01; positions deduplicated before matching."""
-import subprocess, numpy as np, pandas as pd
+import os, subprocess, numpy as np, pandas as pd
 from scipy import stats
-PL = "/mnt/hdd2/loc-tran/miniconda3/envs/ldsc3/bin/plink"; BF = "/mnt/hdd2/loc-tran/birth_canal_gen/ref/EUR"
+PL = os.environ.get("PLINK", "plink"); BF = os.environ.get("REF_EUR", "ref/EUR")  # PLINK 1.9, 1000G EUR bfile prefix
 bim = pd.read_csv(BF + ".bim", sep="\t", header=None, names=["c", "rsid", "cm", "pos37", "A1", "A2"])
 def pq(name, hdrfile):
     h = open(hdrfile).read().strip().split("\t")

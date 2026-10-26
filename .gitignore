@@ -1,0 +1,13 @@
+*.tbi
+data/finngen/
+data/mvp/
+data/pqtl/
+data/ukb/
+logs/
+outputs/*
+!outputs/*.tsv
+!outputs/*.txt
+outputs/sig.tsv
+outputs/iv.txt
+outputs/tmp_iv.txt
+__pycache__/
