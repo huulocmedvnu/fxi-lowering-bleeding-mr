@@ -48,7 +48,7 @@ for (lab, a, s, ep), yy in zip(items, y):
     r = row(a, s, ep); col = BLUE if s == "MVP" or ep in ("icd10-I26-both_sexes", "icd10-I80-both_sexes", "I9_VTE") else (RED if s == "META" else INK)
     fig.add_trace(go.Scatter(x=[r.lo, r.hi], y=[yy, yy], mode="lines", line=dict(color=col, width=2.5)), 1, 2)
     fig.add_trace(go.Scatter(x=[r.OR], y=[yy], mode="markers", marker=dict(symbol="diamond" if s == "META" else "square", size=15 if s == "META" else 11, color=col)), 1, 2)
-    p = f"{r.P:.1e}".replace("e-0", " × 10<sup>-").replace("e-", " × 10<sup>-") + "</sup>" if r.P < 0.001 else f"{r.P:.2f}"
+    p = f"{r.P:.1e}".replace("e-0", " × 10<sup>-").replace("e-", " × 10<sup>-") + "</sup>" if r.P < 0.001 else (f"{r.P:#.2g}" if r.P >= 0.01 else f"{r.P:.1g}")  # AHA: 2 significant digits, 1 below 0.01
     txt.append((f"{r.OR:.2f} ({r.lo:.2f}-{r.hi:.2f})", p))
 for lab, t_, yy in zip(labels, txt, y):
     fig.add_annotation(x=0, y=yy, xref="x1", yref="y1", text=lab, showarrow=False, xanchor="left", font=FONT)
