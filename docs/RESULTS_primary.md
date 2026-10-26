@@ -17,7 +17,7 @@ KLKB1: 46/65 instruments have KLKB1 P<1e-4 (regional LD) but effect correlation 
   VTE 0.54 (0.45-0.65), PPH 0.93 (0.81-1.07), HMB 0.92 (0.84-1.02). MVMR FXI|KLKB1: VTE 0.53, PPH 1.03 (0.95-1.11), HMB 0.96 (0.90-1.02).
 Weighted median / MR-Egger (r2<0.01): VTE 0.52 / 0.49 (0.44-0.55); PPH 1.10 / 1.16 (0.98-1.37), intercept P 0.40;
   HMB 0.96 / 0.97 (0.87-1.09).
-Replication exposure (SomaScan, n 3,506, GCST90424248): 43 shared instruments, sign concordance 0.81, r 0.42,
+CORRECTION 26/10: GCST90424248 is CEREBROSPINAL FLUID FXI (Western 2024 Nat Genet, PMID 39528825), not plasma; not an exposure replication, supplementary concordance only. Original note: (SomaScan CSF, n 3,506, GCST90424248): 43 shared instruments, sign concordance 0.81, r 0.42,
   none P<5e-8; Wald at rs3775297: VTE 0.47 (0.38-0.57), PPH 0.94 (0.70-1.28), HMB 0.92 (0.74-1.14).
 Pregnancy-associated VTE: FinnGen endpoints O15_PREG_VENOUS_HAEMORRH (685) and O15_VENOUS_COMPLIC (389) include
   haemorrhoids and are below 1,000 cases; not analysed (limitation).
