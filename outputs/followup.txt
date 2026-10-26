@@ -1,0 +1,26 @@
+== coloc (cis window, prior p12 1e-5): PP3 different variants, PP4 shared
+  FXI x I9_VTE                       n=5354 PP0-4 0.000 0.000 0.000 0.001 0.999
+  FXI x O15_POSTPART_HEAMORRH_ALLW   n=5354 PP0-4 0.000 0.660 0.000 0.315 0.025
+  FXI x N14_MENORRHAGIA              n=5353 PP0-4 0.000 0.804 0.000 0.191 0.005
+  FXI x O15_GESTAT_HYPERT            n=5354 PP0-4 0.000 0.738 0.000 0.255 0.007
+  FXI x KLKB1 PP0-4 0.000 0.000 0.000 1.000 0.000
+== KLKB1: instruments with KLKB1 P<1e-4: 46/65; corr(bx, bk) 0.04
+== I9_VTE
+  main IVW          OR 0.53 (0.47-0.60) P 4.7e-25
+  excl KLKB1-assoc  OR 0.54 (0.45-0.65) P 1.3e-10 (n=17)
+  MVMR FXI|KLKB1    OR 0.53 (0.47-0.60) P 1.1e-23
+== O15_POSTPART_HEAMORRH_ALLW
+  main IVW          OR 1.03 (0.95-1.12) P 0.42
+  excl KLKB1-assoc  OR 0.93 (0.81-1.07) P 0.29 (n=17)
+  MVMR FXI|KLKB1    OR 1.03 (0.95-1.11) P 0.55
+== N14_MENORRHAGIA
+  main IVW          OR 0.96 (0.90-1.02) P 0.17
+  excl KLKB1-assoc  OR 0.92 (0.84-1.02) P 0.12 (n=17)
+  MVMR FXI|KLKB1    OR 0.96 (0.90-1.02) P 0.2
+  I9_VTE                       WM OR 0.52 | Egger slope OR 0.49 (0.44-0.55) intercept P 0.15
+  O15_POSTPART_HEAMORRH_ALLW   WM OR 1.10 | Egger slope OR 1.16 (0.98-1.37) intercept P 0.4
+  N14_MENORRHAGIA              WM OR 0.96 | Egger slope OR 0.97 (0.87-1.09) intercept P 0.65
+== replication pQTL: 43 instruments; sign concordance 0.81; corr 0.42; replication-P<5e-8 instruments 0
+  rep Wald rs3775297 I9_VTE                       OR 0.47 (0.38-0.57) P 2.9e-13 (per SD lower FXI, SomaScan scale)
+  rep Wald rs3775297 O15_POSTPART_HEAMORRH_ALLW   OR 0.94 (0.70-1.28) P 0.71 (per SD lower FXI, SomaScan scale)
+  rep Wald rs3775297 N14_MENORRHAGIA              OR 0.92 (0.74-1.14) P 0.43 (per SD lower FXI, SomaScan scale)
