@@ -49,7 +49,7 @@ for (lab, a, s, ep), yy in zip(items, y):
     fig.add_trace(go.Scatter(x=[r.lo, r.hi], y=[yy, yy], mode="lines", line=dict(color=col, width=2)), 1, 2)
     fig.add_trace(go.Scatter(x=[r.OR], y=[yy], mode="markers", marker=dict(symbol="diamond" if s == "META" else "square", size=11 if s == "META" else 8, color=col)), 1, 2)
     p = f"{r.P:.1e}".replace("e-0", " × 10<sup>-").replace("e-", " × 10<sup>-") + "</sup>" if r.P < 0.001 else f"{r.P:.2f}"
-    txt.append(f"{r.OR:.2f} ({r.lo:.2f} to {r.hi:.2f})   P {p}")
+    txt.append(f"{r.OR:.2f} ({r.lo:.2f} to {r.hi:.2f})   P = {p}")
 for lab, t_, yy in zip(labels, txt, y):
     fig.add_annotation(x=0, y=yy, xref="x1", yref="y1", text=lab, showarrow=False, xanchor="left", font=FONT)
     fig.add_annotation(x=0.66, y=yy, xref="x1", yref="y1", text=t_, showarrow=False, xanchor="left", font=FONT)
