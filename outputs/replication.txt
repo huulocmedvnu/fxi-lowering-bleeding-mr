@@ -1,0 +1,14 @@
+FinnGen I9_VTE                     n_iv= 56 OR 0.53 (0.47-0.60) P 4.7e-25
+FinnGen O15_POSTPART_HEAMORRH_ALLW n_iv= 56 OR 1.03 (0.95-1.12) P 0.42
+FinnGen N14_MENORRHAGIA            n_iv= 56 OR 0.96 (0.90-1.02) P 0.17
+UKB O72 PPH                        n_iv= 65 OR 0.97 (0.84-1.12) P 0.67
+UKB N92 heavy/irregular menses     n_iv= 65 OR 0.93 (0.86-1.00) P 0.056
+UKB I26 pulmonary embolism         n_iv= 65 OR 0.48 (0.41-0.56) P 3.2e-20
+UKB I80 phlebitis/thrombophlebitis n_iv= 65 OR 0.56 (0.49-0.64) P 1.1e-17
+MVP VTE                            n_iv= 65 OR 0.46 (0.42-0.49) P 2.9e-87
+== fixed-effect meta FinnGen + UKB
+META PPH                           n_iv=  0 OR 1.02 (0.95-1.09) P 0.61
+                                   heterogeneity P 0.45
+META heavy menstrual bleeding      n_iv=  0 OR 0.95 (0.90-0.99) P 0.023
+                                   heterogeneity P 0.58
+replicate 21.39 s

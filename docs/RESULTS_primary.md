@@ -21,3 +21,10 @@ Replication exposure (SomaScan, n 3,506, GCST90424248): 43 shared instruments, s
   none P<5e-8; Wald at rs3775297: VTE 0.47 (0.38-0.57), PPH 0.94 (0.70-1.28), HMB 0.92 (0.74-1.14).
 Pregnancy-associated VTE: FinnGen endpoints O15_PREG_VENOUS_HAEMORRH (685) and O15_VENOUS_COMPLIC (389) include
   haemorrhoids and are below 1,000 cases; not analysed (limitation).
+
+# Outcome replication (amendment 2026-10-26a; outputs/replication.txt)
+VTE positive control: UKB I26 0.48 (0.41-0.56) P 3e-20; UKB I80 0.56 (0.49-0.64) P 1e-17; MVP VTE 0.46 (0.42-0.49) P 3e-87.
+PPH: UKB O72 (1,321 cases) 0.97 (0.84-1.12); FinnGen+UKB meta 1.02 (0.95-1.09), heterogeneity P 0.45.
+Heavy menstrual bleeding: UKB N92 0.93 (0.86-1.00) P 0.056; meta 0.95 (0.90-0.99) P 0.023 (direction towards less bleeding;
+not hypothesised, nominal).
+UKB outcomes partly overlap the UKB pQTL sample (~10%).
