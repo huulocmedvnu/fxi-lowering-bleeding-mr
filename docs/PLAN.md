@@ -38,4 +38,12 @@ with the data.
 cis-window extraction of summary statistics in Rust (or tabix); timed on one file first.
 
 ## Amendments
-(none)
+### 2026-10-26a (after primary and follow-up results; before replication outcome data were extracted)
+Target journal ATVB requires replication of MR findings in an independent sample. Outcome replication:
+UK Biobank (Pan-UKBB, EUR, GRCh37): O72 postpartum haemorrhage, N92 excessive/frequent/irregular menstruation;
+VTE positive control: I26 pulmonary embolism, I80 phlebitis and thrombophlebitis; and MVP VTE (GCST90476007, no UKB).
+Same instruments (r2<0.1), matched by rsID through 1000G EUR (GRCh37). The FXI pQTL sample (47,745) is a subset of
+UK Biobank, so UKB outcome estimates have partial sample overlap (about 10%); this is stated, and the SomaScan
+exposure (non-UKB) Wald estimate is also given for UKB outcomes. FinnGen and UKB estimates combined by fixed-effect
+inverse-variance meta-analysis. Endpoint deviations from the original list (GI bleeding and epistaxis not available
+in FinnGen R12; composite BLEEDING and anaemia endpoints used) are recorded here.
